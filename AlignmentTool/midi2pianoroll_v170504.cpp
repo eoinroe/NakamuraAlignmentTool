@@ -20,20 +20,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<cassert>
 #include<algorithm>
 #include "PianoRoll_v170503.hpp"
+#include "../Align.h"
+
 using namespace std;
 
-int main(int argc, char** argv) {
+int Midi2PianoRoll(int pianoRollType, const std::string& infileStem) {
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
 
-	if(argc!=3){cout<<"Error in usage: $./this (0:spr/1:ipr/2:spr[pedal on]/3:ipr[pedal on]) in(.mid)"<<endl; return -1;}
-		string infileStem=string(argv[2]);
-		int pianoRollType=atoi(argv[1]);//0: spelled pitch, 1: integral pitch
-		if(pianoRollType<0 || pianoRollType>3){
-		cout<<"Error in usage: $./this (0:spr/1:ipr/2:spr[pedal on]/3:ipr[pedal on]) in(.mid)"<<endl; return -1;
-	}//endif
+    if(pianoRollType<0 || pianoRollType>3){
+        cout<<"Error in usage: $./this (0:spr/1:ipr/2:spr[pedal on]/3:ipr[pedal on]) in(.mid)"<<endl; return -1;
+    }//endif
 
 	PianoRoll pr;
 	ss.str(""); ss<<infileStem<<".mid";

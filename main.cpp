@@ -1,6 +1,11 @@
 #include <iostream>
+#include "Align.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::string I1 = "/Users/eoinroe/Downloads/AlignmentTool/ex_ref";
+    std::string I2 = "/Users/eoinroe/Downloads/AlignmentTool/ex_align1";
+
+    Midi2PianoRoll(0, I2);
+
     return 0;
 }
