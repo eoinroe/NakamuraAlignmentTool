@@ -1,0 +1,12 @@
+//
+// Created by Eoin Roe on 10/06/2024.
+//
+
+#ifndef NAKAMURAALIGNMENTTOOL_MUSICXMLTOHMM_V170104_H
+#define NAKAMURAALIGNMENTTOOL_MUSICXMLTOHMM_V170104_H
+
+#include <string>
+
+int MusicXMLToHMM(const std::string& infileStem);
+
+#endif //NAKAMURAALIGNMENTTOOL_MUSICXMLTOHMM_V170104_H

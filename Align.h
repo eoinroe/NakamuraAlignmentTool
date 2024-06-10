@@ -6,7 +6,7 @@
 
 #include <string>
 
-int Midi2PianoRoll(int pianoRollType, const std::string& infileStem);
+// int Midi2PianoRoll(int pianoRollType, const std::string& infileStem);
 
 
 

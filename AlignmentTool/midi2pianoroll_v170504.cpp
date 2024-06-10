@@ -19,8 +19,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<cmath>
 #include<cassert>
 #include<algorithm>
+#include "midi2pianoroll_v170504.h"
 #include "PianoRoll_v170503.hpp"
-#include "../Align.h"
 
 using namespace std;
 
