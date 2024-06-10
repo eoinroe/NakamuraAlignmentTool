@@ -16,9 +16,9 @@
 #include<climits>
 using namespace std;
 
-mt19937_64 mt_(0);
-uniform_real_distribution<> rand1_(0,1);
-uniform_int_distribution<> rand1int_(0,INT_MAX);
+inline mt19937_64 mt_(0);
+inline uniform_real_distribution<> rand1_(0,1);
+inline uniform_int_distribution<> rand1int_(0,INT_MAX);
 // mt_=mt19937_64(seed);
 
 inline double RandDouble(){//between 0 and 1
@@ -222,7 +222,7 @@ inline double GetMin(vector<double>& vd){
 	return min;
 }//end GetMin
 
-double SqDist(vector<double> &p,vector<double> &q,double scale=1){//p given q
+inline double SqDist(vector<double> &p,vector<double> &q,double scale=1){//p given q
 	assert(p.size()==q.size());
 	double sum=0;
 	for(int i=0;i<p.size();i+=1){

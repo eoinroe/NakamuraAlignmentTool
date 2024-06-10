@@ -8,6 +8,8 @@
 
 int Midi2PianoRoll(int pianoRollType, const std::string& infileStem);
 
+int MusicXMLToHMM(const std::string& infileStem);
+
 
 
 

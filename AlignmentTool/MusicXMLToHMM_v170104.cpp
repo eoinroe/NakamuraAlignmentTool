@@ -16,26 +16,26 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<fstream>
 #include<cassert>
 #include"Hmm_v170225.hpp"
+#include "../Align.h"
+
 using namespace std;
 
-int main(int argc, char** argv) {
+int MusicXMLToHMM(const string& infileStem) {
 
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
 
-	if(argc!=3){cout<<"Error in usage! : $./this in.xml out_hmm.txt"<<endl; return -1;}
-
 	Fmt1x fmt1;
 	Fmt2 fmt2;
 	Hom hom;
 	Hmm hmm;
-	fmt1.ReadMusicXML(string(argv[1]));
+	fmt1.ReadMusicXML(infileStem + ".xml");
 	fmt2.ConvertFromFmt1x(fmt1);
 	hom.ConvertFromFmt2(fmt2);
 	hmm.ConvertFromHom(hom);
-	hmm.WriteFile(string(argv[2]));
+	hmm.WriteFile(infileStem + "_hmm.txt");
 
 	return 0;
 }//end main
