@@ -8,6 +8,7 @@ int main() {
     Midi2PianoRoll(0, I2);
 
     MusicXMLToHMM(I1);
+    MusicXMLToFmt3x(I1);
 
     return 0;
 }

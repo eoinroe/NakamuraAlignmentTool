@@ -16,22 +16,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<fstream>
 #include<cassert>
 #include"Fmt3x_v170225.hpp"
+#include "../Align.h"
+
 using namespace std;
 
-int main(int argc, char** argv) {
+int MusicXMLToFmt3x(const std::string& infileStem) {
 
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
 
-	if(argc!=3){cout<<"Error in usage! : $./this in.xml out_fmt3x.txt"<<endl; return -1;}
-
 	Fmt1x fmt1;
 	Fmt3x fmt3;
-	fmt1.ReadMusicXML(string(argv[1]));
+	fmt1.ReadMusicXML(infileStem + ".xml");
 	fmt3.ConvertFromFmt1x(fmt1);
-	fmt3.WriteFile(string(argv[2]));
+	fmt3.WriteFile(infileStem + "_fmt3x.txt");
 
 	return 0;
 }//end main
