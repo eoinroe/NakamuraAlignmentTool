@@ -1,3 +1,0 @@
-/Users/eoinroe/CLionProjects/NakamuraAlignmentTool/cmake-build-debug/CMakeFiles/NakamuraAlignmentTool.dir
-/Users/eoinroe/CLionProjects/NakamuraAlignmentTool/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/eoinroe/CLionProjects/NakamuraAlignmentTool/cmake-build-debug/CMakeFiles/rebuild_cache.dir
