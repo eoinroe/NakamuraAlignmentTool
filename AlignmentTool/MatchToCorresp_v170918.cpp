@@ -17,6 +17,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<cassert>
 #include"ScorePerfmMatch_v170503.hpp"
 #include"PianoRoll_v170503.hpp"
+#include"../Align.h"
+
 using namespace std;
 
 class CorrespEvt{
@@ -34,18 +36,12 @@ public:
 };//endclass CorrespEvt
 
 
-int main(int argc, char** argv) {
+int MatchToCorresp(const string& alignMatch, const string& refSpr, const string& outCorresp) {
 
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
-
-	if(argc!=4){cout<<"Error in usage! : $./this align_match.txt ref_spr.txt out_corresp.txt"<<endl; return -1;}
-
-	string alignMatch=string(argv[1]);
-	string refSpr=string(argv[2]);
-	string outCorresp=string(argv[3]);
 
 	ScorePerfmMatch match;
 	PianoRoll pr;

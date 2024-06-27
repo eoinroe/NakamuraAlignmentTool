@@ -22,6 +22,8 @@ int SprToFmt3x(const std::string& infileStem);
 
 int Fmt3xToHmm(const std::string& infileStem);
 
+int MatchToCorresp(const std::string& alignMatch, const std::string& refSpr, const std::string& outCorresp);
+
 
 
 
