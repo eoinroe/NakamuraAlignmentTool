@@ -79,6 +79,12 @@ build CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ScorePerfmMatcher_v1701
   OBJECT_DIR = CMakeFiles/NakamuraAlignmentTool.dir
   OBJECT_FILE_DIR = CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool
 
+build CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ErrorDetection_v190702.cpp.o: CXX_COMPILER__NakamuraAlignmentTool_Debug /Users/eoinroe/CLionProjects/NakamuraAlignmentTool/AlignmentTool/ErrorDetection_v190702.cpp || cmake_object_order_depends_target_NakamuraAlignmentTool
+  DEP_FILE = CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ErrorDetection_v190702.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/NakamuraAlignmentTool.dir
+  OBJECT_FILE_DIR = CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target NakamuraAlignmentTool
@@ -87,7 +93,7 @@ build CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ScorePerfmMatcher_v1701
 #############################################
 # Link the executable NakamuraAlignmentTool
 
-build NakamuraAlignmentTool: CXX_EXECUTABLE_LINKER__NakamuraAlignmentTool_Debug CMakeFiles/NakamuraAlignmentTool.dir/main.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/midi2pianoroll_v170504.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToHMM_v170104.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToFmt3x_v170104.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ScorePerfmMatcher_v170101_2.cpp.o
+build NakamuraAlignmentTool: CXX_EXECUTABLE_LINKER__NakamuraAlignmentTool_Debug CMakeFiles/NakamuraAlignmentTool.dir/main.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/midi2pianoroll_v170504.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToHMM_v170104.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToFmt3x_v170104.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ScorePerfmMatcher_v170101_2.cpp.o CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ErrorDetection_v190702.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
   OBJECT_DIR = CMakeFiles/NakamuraAlignmentTool.dir
   POST_BUILD = :

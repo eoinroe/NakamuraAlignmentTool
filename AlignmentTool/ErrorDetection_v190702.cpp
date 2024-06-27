@@ -20,6 +20,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include"Fmt3x_v170225.hpp"
 #include"Hmm_v170225.hpp"
 #include"ScorePerfmMatch_v170503.hpp"
+#include "../Align.h"
+
 using namespace std;
 
 #define printOn false
@@ -86,24 +88,13 @@ double errLP(int pitchError){
 
 }//end errLP
 
-int main(int argc, char** argv){
+int ErrorDetection(const string& fmt3FileName, const string& hmmFileName, const string& in_matchFileName, const string& out_witherror_matchFileName, bool realignment){
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
 	clock_t start, end;
 	start = clock();
-
-	if(argc!=6){
-		cout<<"Error in usage: $./this in_fmt3x.txt in_hmm.txt in_match.txt out_witherror_match.txt realignemnt(0:no/1:yes)"<<endl;
-		return -1;
-	}//endif
-
-	string fmt3FileName=string(argv[1]);
-	string hmmFileName=string(argv[2]);
-	string in_matchFileName=string(argv[3]);
-	string out_witherror_matchFileName=string(argv[4]);
-	bool realignment=((atoi(argv[5])==0)? false:true);
 
 	Fmt3x fmt3;
 	Hmm hmm;

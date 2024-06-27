@@ -14,6 +14,8 @@ int MusicXMLToFmt3x(const std::string& infileStem);
 
 int ScorePerfmMatcher(const std::string& hmmName, const std::string& perfmName, const std::string& matchfileName, double secPerQN);
 
+int ErrorDetection(const std::string& fmt3FileName, const std::string& hmmFileName, const std::string& in_matchFileName, const std::string& out_witherror_matchFileName, bool realignment=false);
+
 
 
 
