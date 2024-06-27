@@ -17,24 +17,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include"stdio.h"
 #include"stdlib.h"
 #include"ScoreFollower_v170503.hpp"
+#include "../Align.h"
+
 using namespace std;
 
-int main(int argc, char** argv){
+int ScorePerfmMatcher(const string& hmmName, const string& perfmName, const string& matchfileName, double secPerQN){
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
 	clock_t start, end;
 	start = clock();
-
-	if(argc!=5){
-		cout<<"Error in usage: $./ScorePerfmMatcher hmm.txt perfm_spr.txt result_match.txt secPerQuarterNote(=0.01)"<<endl;
-		return -1;
-	}//endif
-	string hmmName=string(argv[1]);
-	string perfmName=string(argv[2]);
-	string matchfileName=string(argv[3]);
-	double secPerQN=atof(argv[4]);
 
 	ScoreFollower scofo(hmmName,secPerQN);
 

@@ -1,0 +1,13 @@
+# ninja log v5
+5	419	1718040146030036244	CMakeFiles/NakamuraAlignmentTool.dir/main.cpp.o	a3589b06f3b24233
+5	889	1718040146496220148	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/midi2pianoroll_v170504.cpp.o	bdcc9aa825c396ed
+0	43	1719493616556552466	build.ninja	d3444d18e46ce5f7
+6	1268	1718040146875322675	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToHMM_v170104.cpp.o	5a06134aca76b231
+1268	1381	1718040146989430071	NakamuraAlignmentTool	a70ac5158016a048
+6	1204	1718040146809867832	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToFmt3x_v170104.cpp.o	4ebdb820439fb61f
+5	290	1719494601381087291	CMakeFiles/NakamuraAlignmentTool.dir/main.cpp.o	a3589b06f3b24233
+5	749	1719494601833512974	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/midi2pianoroll_v170504.cpp.o	bdcc9aa825c396ed
+6	1061	1719494602147153357	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToFmt3x_v170104.cpp.o	4ebdb820439fb61f
+6	1141	1719494602222415358	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/MusicXMLToHMM_v170104.cpp.o	5a06134aca76b231
+6	1183	1719494602270372512	CMakeFiles/NakamuraAlignmentTool.dir/AlignmentTool/ScorePerfmMatcher_v170101_2.cpp.o	769eb579a8ef6dea
+1183	2719	1719494603812662002	NakamuraAlignmentTool	ef498919a5ffc20b

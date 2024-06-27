@@ -12,6 +12,8 @@ int MusicXMLToHMM(const std::string& infileStem);
 
 int MusicXMLToFmt3x(const std::string& infileStem);
 
+int ScorePerfmMatcher(const std::string& hmmName, const std::string& perfmName, const std::string& matchfileName, double secPerQN);
+
 
 
 
