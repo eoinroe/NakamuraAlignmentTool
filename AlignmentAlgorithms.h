@@ -6,7 +6,7 @@
 
 #include "AlignmentTool.h"
 
-int MusicXMLToMIDIAlign(const std::string& I1, const std::string& I2)
+inline int MusicXMLToMIDIAlign(const std::string& I1, const std::string& I2)
 {
     Midi2PianoRoll(0, I2);
 
@@ -32,7 +32,7 @@ int MusicXMLToMIDIAlign(const std::string& I1, const std::string& I2)
     return 0;
 }
 
-int MIDIToMIDIAlign(const std::string& I1, const std::string& I2)
+inline int MIDIToMIDIAlign(const std::string& I1, const std::string& I2)
 {
     Midi2PianoRoll(0, I1);
     Midi2PianoRoll(0, I2);

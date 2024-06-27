@@ -20,56 +20,57 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include"Fmt3x_v170225.hpp"
 #include"Hmm_v170225.hpp"
 #include"ScorePerfmMatch_v170503.hpp"
+#include"RealignmentMOHMM_v170427.hpp"
 #include "../AlignmentTool.h"
 
 using namespace std;
 
 #define printOn false
 
-class ScoreNote{
-public:
-	int pitch;
-	string sitch;
-	string fmt1ID;
-	int noteStatus;//0(not yet found)/1(found)
-	int hmmID1;//hmm.evts[hmmID1].sitchesPerCluster[hmmID2][hmmID3]
-	int hmmID2;
-	int hmmID3;
-
-	void Print(){
-cout<<"pitch,sitch,fmt1ID,noteStatus,hmmID1,2,3 : "<<pitch<<"\t"<<sitch<<"\t"<<fmt1ID<<"\t"<<noteStatus<<"\t"<<hmmID1<<","<<hmmID2<<","<<hmmID3<<endl;
-	}//end Print
-
-};//endclass ScoreNote
-
-class LessScoreNote{
-public:
-	bool operator()(const ScoreNote& a, const ScoreNote& b){
-		return a.pitch < b.pitch;
-	}//end operator()
-};//endclass LessScoreNote
-//stable_sort(scoreNotes.begin(), scoreNotes.end(), LessScoreNote());
-
-class PerfmNote{
-public:
-	int pitch;
-	int noteID;
-	int noteStatus;//0(correct)/1(extra)/2(substitution)/-1(unknown)
-	int scoreNoteRef;
-
-	void Print(){
-cout<<"pitch,noteID,noteStatus,scoreNoteRef : "<<pitch<<"\t"<<noteID<<"\t"<<noteStatus<<"\t"<<scoreNoteRef<<endl;
-	}//end Print
-
-};//endclass PerfmNote
-
-class LessPerfmNote{
-public:
-	bool operator()(const PerfmNote& a, const PerfmNote& b){
-		return a.pitch < b.pitch;
-	}//end operator()
-};//endclass LessPerfmNote
-//stable_sort(perfmNotes.begin(), perfmNotes.end(), LessPerfmNote());
+// class ScoreNote{
+// public:
+// 	int pitch;
+// 	string sitch;
+// 	string fmt1ID;
+// 	int noteStatus;//0(not yet found)/1(found)
+// 	int hmmID1;//hmm.evts[hmmID1].sitchesPerCluster[hmmID2][hmmID3]
+// 	int hmmID2;
+// 	int hmmID3;
+//
+// 	void Print(){
+// cout<<"pitch,sitch,fmt1ID,noteStatus,hmmID1,2,3 : "<<pitch<<"\t"<<sitch<<"\t"<<fmt1ID<<"\t"<<noteStatus<<"\t"<<hmmID1<<","<<hmmID2<<","<<hmmID3<<endl;
+// 	}//end Print
+//
+// };//endclass ScoreNote
+//
+// class LessScoreNote{
+// public:
+// 	bool operator()(const ScoreNote& a, const ScoreNote& b){
+// 		return a.pitch < b.pitch;
+// 	}//end operator()
+// };//endclass LessScoreNote
+// //stable_sort(scoreNotes.begin(), scoreNotes.end(), LessScoreNote());
+//
+// class PerfmNote{
+// public:
+// 	int pitch;
+// 	int noteID;
+// 	int noteStatus;//0(correct)/1(extra)/2(substitution)/-1(unknown)
+// 	int scoreNoteRef;
+//
+// 	void Print(){
+// cout<<"pitch,noteID,noteStatus,scoreNoteRef : "<<pitch<<"\t"<<noteID<<"\t"<<noteStatus<<"\t"<<scoreNoteRef<<endl;
+// 	}//end Print
+//
+// };//endclass PerfmNote
+//
+// class LessPerfmNote{
+// public:
+// 	bool operator()(const PerfmNote& a, const PerfmNote& b){
+// 		return a.pitch < b.pitch;
+// 	}//end operator()
+// };//endclass LessPerfmNote
+// //stable_sort(perfmNotes.begin(), perfmNotes.end(), LessPerfmNote());
 
 double errLP(int pitchError){
 	if(pitchError==0){
