@@ -20,6 +20,8 @@ int RealignmentMOHMM(const std::string& fmt3xFile, const std::string& hmmFile, c
 
 int SprToFmt3x(const std::string& infileStem);
 
+int Fmt3xToHmm(const std::string& infileStem);
+
 
 
 

@@ -69,7 +69,7 @@ int main() {
     Midi2PianoRoll(0, I2);
 
     SprToFmt3x(I1);
-    // Fmt3xToHmm(I1);
+    Fmt3xToHmm(I1);
 
     return 0;
 }
