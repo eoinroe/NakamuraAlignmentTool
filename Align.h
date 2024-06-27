@@ -18,6 +18,8 @@ int ErrorDetection(const std::string& fmt3FileName, const std::string& hmmFileNa
 
 int RealignmentMOHMM(const std::string& fmt3xFile, const std::string& hmmFile, const std::string& inMatchFile, const std::string& outMatchFile, double widthSec);
 
+int SprToFmt3x(const std::string& infileStem);
+
 
 
 
