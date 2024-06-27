@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<fstream>
 #include<cassert>
 #include "Fmt3x_v170225.hpp"
-#include "../Align.h"
+#include "../AlignmentTool.h"
 
 using namespace std;
 

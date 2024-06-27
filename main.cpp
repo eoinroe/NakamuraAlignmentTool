@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Align.h"
+#include "AlignmentTool.h"
 
 int MusicXMLToMIDIAlign(std::string I1, std::string I2)
 {
