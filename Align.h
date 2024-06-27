@@ -16,6 +16,8 @@ int ScorePerfmMatcher(const std::string& hmmName, const std::string& perfmName, 
 
 int ErrorDetection(const std::string& fmt3FileName, const std::string& hmmFileName, const std::string& in_matchFileName, const std::string& out_witherror_matchFileName, bool realignment=false);
 
+int RealignmentMOHMM(const std::string& fmt3xFile, const std::string& hmmFile, const std::string& inMatchFile, const std::string& outMatchFile, double widthSec);
+
 
 
 

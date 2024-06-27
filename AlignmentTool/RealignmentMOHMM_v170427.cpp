@@ -16,6 +16,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include<fstream>
 #include<cassert>
 #include "RealignmentMOHMM_v170427.hpp"
+#include "../Align.h"
+
 using namespace std;
 
 #define EPS 0.001;
@@ -183,19 +185,12 @@ cout<<"["<<regions[i][0]<<","<<regions[i][1]<<")"<<endl;
 };//end Regions
 
 
-int main(int argc,char** argv){
+int RealignmentMOHMM(const string& fmt3xFile, const string& hmmFile, const string& inMatchFile, const string& outMatchFile, double widthSec){
 
 	vector<int> v(100);
 	vector<double> d(100);
 	vector<string> s(100);
 	stringstream ss;
-	if(argc!=6){cout<<"Error in usage! : $./this in_fmt3x.txt in_hmm.txt in_err_match.txt out_realigned_match.txt widthSec"<<endl; return -1;}
-
-	string fmt3xFile=string(argv[1]);
-	string hmmFile=string(argv[2]);
-	string inMatchFile=string(argv[3]);
-	string outMatchFile=string(argv[4]);
-	double widthSec=atof(argv[5]);
 
 	Fmt3x fmt3x;
 	fmt3x.ReadFile(fmt3xFile);
